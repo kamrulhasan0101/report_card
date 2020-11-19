@@ -4,7 +4,7 @@
         <template id="dis_report">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="o">
-                    <h1 t-esc="o.student_id.name">  </h1>
+<!--                    <h1 t-esc="o.student_id.name">  </h1>-->
 
                     <div class="container">
                         <div class="row">
@@ -22,7 +22,7 @@
                                                 <span>Email: info@dis.edu.bd</span>
                                             </h6>
                                             <h4 style="font-style: italic;">Report Card</h4>
-                                            <h4>Mid Term Examination 2020</h4>
+                                            <h4><span t-field="o.s_exam_ids"></span></h4>
                                         </div>
                                         <div class="col-2"></div>
                                     </div>
@@ -34,17 +34,17 @@
                                                         <td>
                                                             <strong>Student ID</strong>
                                                         </td>
-                                                        <td style="border-right: none;">1667</td>
+                                                        <td style="border-right: none;"><span t-field="o.pid"></span></td>
                                                         <td style="border-left: none;">
                                                             <strong>Class Roll</strong>
                                                         </td>
-                                                        <td>2</td>
+                                                        <td><span t-field="o.roll_no_id"></span></td>
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             <strong>Student Name</strong>
                                                         </td>
-                                                        <td colspan="3">Talha Taiyer Jamal</td>
+                                                        <td colspan="3"><span t-field="o.student_id"></span></td>
                                                     </tr>
                                                     <tr>
                                                         <td>
@@ -54,7 +54,7 @@
                                                         <td>
                                                             <strong>Class</strong>
                                                         </td>
-                                                        <td>Class - IX</td>
+                                                        <td><span t-field="o.standard_id"></span></td>
                                                     </tr>
                                                     <tr>
                                                         <td>
@@ -591,6 +591,33 @@
                                                         </td>
                                                     </tr>
                                                 </tbody>
+                                            </table>
+                                            <table class="table">
+                                                <t t-foreach="additional_result" t-as="app">
+                                                    <tr>
+                                                        <td t-esc="app['a_exam']">
+                                                        </td>
+
+                                                        <td>
+                                                        </td>
+                                                        <td t-esc="app['roll']">
+                                                           hh
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            hello
+                                                        </td>
+                                                        <td>
+                                                        </td>
+                                                        <td t-esc="app['marks']">
+                                                        </td>
+                                                        <td>
+                                                           tttt
+                                                        </td>
+                                                    </tr>
+                                                </t>
+
                                             </table>
                                         </div>
                                     </div>
