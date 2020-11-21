@@ -72,9 +72,9 @@
                                                         </td>
                                                         <td>2020</td>
                                                         <td>
-                                                            <strong>Group</strong>
+                                                            <strong>Shift</strong>
                                                         </td>
-                                                        <td>Science</td>
+                                                        <td>Morning</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -395,7 +395,7 @@
                                     <div class="row">
                                         <div class="col-4"></div>
                                         <div class="col-4 text-center bg-info">
-                                            <h2>A:Co-Scholstics Head</h2>
+                                            <h2>B:Co-Scholstics Head</h2>
                                         </div>
                                         <div class="col-4"></div>
                                     </div>
@@ -412,39 +412,39 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>
-                                                            <strong>Student IDDD</strong>
+                                                            <strong>English Conversional</strong>
                                                         </td>
-                                                        <td style="border-right: none;">1667</td>
+                                                        <td style="border-right: none;">A</td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <strong>Student Name</strong>
+                                                            <strong>Social Skills</strong>
                                                         </td>
-                                                        <td>Talha Taiyer Jamal</td>
+                                                        <td>A+</td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <strong>Student ID</strong>
+                                                            <strong>Sense of Responsibility</strong>
                                                         </td>
-                                                        <td style="border-right: none;">1667</td>
+                                                        <td style="border-right: none;">A</td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <strong>Student Name</strong>
+                                                            <strong>Creaivity</strong>
                                                         </td>
-                                                        <td>Talha Taiyer Jamal</td>
+                                                        <td>A-</td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <strong>Student ID</strong>
+                                                            <strong>Self Confidence</strong>
                                                         </td>
-                                                        <td style="border-right: none;">1667</td>
+                                                        <td style="border-right: none;">A+</td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <strong>Student Name</strong>
+                                                            <strong>Puntual</strong>
                                                         </td>
-                                                        <td>Talha Taiyer Jamal</td>
+                                                        <td>A+</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -460,39 +460,39 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>
-                                                            <strong>Student IDDD</strong>
+                                                            <strong>Moral Values</strong>
                                                         </td>
-                                                        <td style="border-right: none;">1667</td>
+                                                        <td style="border-right: none;">A+</td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <strong>Student Name</strong>
+                                                            <strong>Team Works</strong>
                                                         </td>
-                                                        <td>Talha Taiyer Jamal</td>
+                                                        <td>A+</td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <strong>Student ID</strong>
+                                                            <strong>Physical, Health Education</strong>
                                                         </td>
-                                                        <td style="border-right: none;">1667</td>
+                                                        <td style="border-right: none;">A+</td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <strong>Student Name</strong>
+                                                            <strong>Neat And Tidy</strong>
                                                         </td>
-                                                        <td>Talha Taiyer Jamal</td>
+                                                        <td>A+</td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <strong>Student ID</strong>
+                                                            <strong>Discipline</strong>
                                                         </td>
-                                                        <td style="border-right: none;">1667</td>
+                                                        <td style="border-right: none;">B-</td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <strong>Student Name</strong>
+                                                            <strong>Attendance/Total Days</strong>
                                                         </td>
-                                                        <td>Talha Taiyer Jamal</td>
+                                                        <td>A</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -593,19 +593,19 @@
                                                 </tbody>
                                             </table>
                                             <table class="table">
-                                                <t t-foreach="additional_result" t-as="app">
                                                     <tr>
-                                                        <td>exam name
+                                                        <td>Add. Exam Name
                                                         </td>
-                                                        <td>exam Total Mark
+                                                        <td>Total Mark
                                                         </td>
 
-                                                        <td>obtain_mark
+                                                        <td>Obtain Mark
                                                         </td>
                                                         <td>
-                                                           roll
+                                                           Roll
                                                         </td>
                                                     </tr>
+                                                <t t-foreach="additional_result" t-as="app">
                                                     <tr>
                                                         <td t-esc="app.a_exam_id.name">
                                                         </td>
@@ -634,7 +634,7 @@
                 id="reportcard_pdf"
                 model="exam.result"
                 string="DIS Report Card"
-                report_type="qweb-pdf"
+                report_type="qweb-html"
                 name="report_card.dis_report"
                 file="report_card.dis_report"
                 print_report_name="'dis card'"

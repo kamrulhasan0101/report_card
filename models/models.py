@@ -11,7 +11,7 @@ class ParticularReport(models.AbstractModel):
         print(docids[0])
         docs = self.env['exam.result'].browse(docids[0])
         add_result = self.env['additional.exam.result'].search([('student_id',
-                                                                 '=', docids[0])])
+                                                                 '=', docs.student_id.id)])
         return {
             'doc_model': 'exam.result',
             'data': data,
