@@ -595,25 +595,25 @@
                                             <table class="table">
                                                 <t t-foreach="additional_result" t-as="app">
                                                     <tr>
-                                                        <td t-esc="app['a_exam']">
+                                                        <td>exam name
+                                                        </td>
+                                                        <td>exam Total Mark
                                                         </td>
 
-                                                        <td>
+                                                        <td>obtain_mark
                                                         </td>
-                                                        <td t-esc="app['roll']">
-                                                           hh
+                                                        <td>
+                                                           roll
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td>
-                                                            hello
+                                                        <td t-esc="app.a_exam_id.name">
                                                         </td>
-                                                        <td>
+                                                        <td t-esc="app.a_exam_id.maximum_marks">
                                                         </td>
-                                                        <td t-esc="app['marks']">
+                                                        <td t-esc="app.obtain_marks">
                                                         </td>
-                                                        <td>
-                                                           tttt
+                                                        <td t-esc="app.roll_no_id">
                                                         </td>
                                                     </tr>
                                                 </t>
