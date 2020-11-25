@@ -4,631 +4,508 @@
         <template id="dis_report">
             <t t-call="web.html_container">
                 <t t-foreach="docs" t-as="o">
-<!--                    <h1 t-esc="o.student_id.name">  </h1>-->
-
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 d-flex justify-content-center">
-                                <div class="bg-white p-4">
-                                    <div class="row mb-2">
-                                        <div class="col-2">
-                                            <img src="dis-logo.png" alt=""/>
-                                        </div>
-                                        <div class="col-8 text-center">
-                                            <h2>Daffodil International School</h2>
-                                            <h3>English Version - Dhanmondi</h3>
-                                            <h6>House#09, Road#14, Dhanmondi, Dhaka-1209</h6>
-                                            <h6>Web: dis.edu.bd
-                                                <span>Email: info@dis.edu.bd</span>
-                                            </h6>
-                                            <h4 style="font-style: italic;">Report Card</h4>
-                                            <h4><span t-field="o.s_exam_ids"></span></h4>
-                                        </div>
-                                        <div class="col-2"></div>
+                    <!--                    <h1 t-esc="o.student_id.name">  </h1>-->
+                    <t t-call="web.basic_layout">
+                        <div class="page">
+                            <div class="bg-white p-4">
+                                <div class="row mb-2">
+                                    <div class="col-2">
+                                        <img src="dis-logo.png" alt=""/>
                                     </div>
-                                    <div class="row d-flex">
-                                        <div class="col-7 justify-content-center align-self-center">
-                                            <table class="table table-bordered student-info-table">
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <strong>Student ID</strong>
-                                                        </td>
-                                                        <td style="border-right: none;"><span t-field="o.pid"></span></td>
-                                                        <td style="border-left: none;">
-                                                            <strong>Class Roll</strong>
-                                                        </td>
-                                                        <td><span t-field="o.roll_no_id"></span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <strong>Student Name</strong>
-                                                        </td>
-                                                        <td colspan="3"><span t-field="o.student_id"></span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <strong>Branch</strong>
-                                                        </td>
-                                                        <td>Sobhanbag</td>
-                                                        <td>
-                                                            <strong>Class</strong>
-                                                        </td>
-                                                        <td><span t-field="o.standard_id"></span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <strong>Section</strong>
-                                                        </td>
-                                                        <td>A</td>
-                                                        <td>
-                                                            <strong>Version</strong>
-                                                        </td>
-                                                        <td>English Version</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <strong>Session</strong>
-                                                        </td>
-                                                        <td>2020</td>
-                                                        <td>
-                                                            <strong>Shift</strong>
-                                                        </td>
-                                                        <td>Morning</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div class="col-5">
-                                            <table class="table table-bordered text-center">
-                                                <thead class="bg-info">
-                                                    <tr>
-                                                        <th>Letter Grade</th>
-                                                        <th>Marks Interval</th>
-                                                        <th>Grade Point</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>A+</td>
-                                                        <td>80-100</td>
-                                                        <td>5</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>A</td>
-                                                        <td>70-79</td>
-                                                        <td>4</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>A-</td>
-                                                        <td>60-69</td>
-                                                        <td>3.50</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>B</td>
-                                                        <td>50-59</td>
-                                                        <td>3</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>C</td>
-                                                        <td>40-49</td>
-                                                        <td>2</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>D</td>
-                                                        <td>33-39</td>
-                                                        <td>1</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>F</td>
-                                                        <td>0-32</td>
-                                                        <td>0</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                    <div class="col-8 text-center">
+                                        <h2>Daffodil International School</h2>
+                                        <h3>English Version - Dhanmondi</h3>
+                                        <h6>House#09, Road#14, Dhanmondi, Dhaka-1209</h6>
+                                        <h6>Web: dis.edu.bd
+                                            <span>Email: info@dis.edu.bd</span>
+                                        </h6>
+                                        <h4 style="font-style: italic;">Report Card</h4>
+                                        <h4>
+                                            <span t-field="o.s_exam_ids"></span>
+                                        </h4>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-4"></div>
-                                        <div class="col-3 text-center bg-info">
-                                            <h2>A:Co-Scholstics</h2>
-                                        </div>
-                                        <div class="col-5"></div>
+                                    <div class="col-2"></div>
+                                </div>
+                                <div class="row d-flex">
+                                    <div class="col-7 justify-content-center align-self-center">
+                                        <table class="table table-bordered student-info-table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <strong>Student ID</strong>
+                                                    </td>
+                                                    <td style="border-right: none;">
+                                                        <span t-field="o.pid"></span>
+                                                    </td>
+                                                    <td style="border-left: none;">
+                                                        <strong>Class Roll</strong>
+                                                    </td>
+                                                    <td>
+                                                        <span t-field="o.roll_no_id"></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <strong>Student Name</strong>
+                                                    </td>
+                                                    <td colspan="3">
+                                                        <span t-field="o.student_id"></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <strong>Branch</strong>
+                                                    </td>
+                                                    <td>Sobhanbag</td>
+                                                    <td>
+                                                        <strong>Class</strong>
+                                                    </td>
+                                                    <td>
+                                                        <span t-field="o.standard_id"></span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <strong>Section</strong>
+                                                    </td>
+                                                    <td>A</td>
+                                                    <td>
+                                                        <strong>Version</strong>
+                                                    </td>
+                                                    <td>English Version</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <strong>Session</strong>
+                                                    </td>
+                                                    <td>2020</td>
+                                                    <td>
+                                                        <strong>Shift</strong>
+                                                    </td>
+                                                    <td>Morning</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <table class="table table-bordered mb-1 border-left-0 border-right-0">
-                                                <thead>
+                                    <div class="col-5">
+                                        <table class="table table-bordered text-center">
+                                            <thead class="bg-info">
+                                                <tr>
+                                                    <th>Letter Grade</th>
+                                                    <th>Marks Interval</th>
+                                                    <th>Grade Point</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <t t-foreach="o.grade_system.grade_ids" t-as="g">
                                                     <tr>
-                                                        <th class="align-middle" rowspan="2">Srl.</th>
-                                                        <th class="align-middle" rowspan="2">Subjects</th>
-                                                        <th class="align-middle" rowspan="2">Full Marks</th>
-                                                        <th class="align-middle" rowspan="2">S.B.A</th>
-                                                        <th class="align-middle" rowspan="2">CT</th>
-                                                        <th class="align-middle" colspan="5"></th>
-                                                        <th class="align-middle" rowspan="2">Total Marks</th>
-                                                        <th class="align-middle" rowspan="2">Highest Marks</th>
-                                                        <th class="align-middle" rowspan="2">Letter Grade</th>
+                                                        <td><span t-field="g.grade"/></td>
+                                                        <td><span t-esc="'%d-%d'%(g.from_mark, g.to_mark)"/></td>
+                                                        <td>have to add</td>
                                                     </tr>
-                                                    <tr>
-                                                        <th class="align-middle">MCQ</th>
-                                                        <th class="align-middle">CQ</th>
-                                                        <th class="align-middle">PR</th>
-                                                        <th class="align-middle">Total</th>
-                                                        <th class="align-middle">Con.T</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody class="border-left-0 border-right-0">
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>English-I</td>
-                                                        <td>100.00</td>
-                                                        <td>5</td>
-                                                        <td>8.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td>70.40</td>
-                                                        <td>83.00</td>
-                                                        <td>88.00</td>
-                                                        <td>A</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>02</td>
-                                                        <td>English-I</td>
-                                                        <td>100.00</td>
-                                                        <td>5</td>
-                                                        <td>8.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td>70.40</td>
-                                                        <td>83.00</td>
-                                                        <td>88.00</td>
-                                                        <td>A+</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>03</td>
-                                                        <td>English-I</td>
-                                                        <td>100.00</td>
-                                                        <td>5</td>
-                                                        <td>8.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td>70.40</td>
-                                                        <td>83.00</td>
-                                                        <td>88.00</td>
-                                                        <td>A</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>04</td>
-                                                        <td>English-I</td>
-                                                        <td>100.00</td>
-                                                        <td>5</td>
-                                                        <td>8.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td>70.40</td>
-                                                        <td>83.00</td>
-                                                        <td>88.00</td>
-                                                        <td>A</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>05</td>
-                                                        <td>English-I</td>
-                                                        <td>100.00</td>
-                                                        <td>5</td>
-                                                        <td>8.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td>70.40</td>
-                                                        <td>83.00</td>
-                                                        <td>88.00</td>
-                                                        <td>A</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>06</td>
-                                                        <td>English-I</td>
-                                                        <td>100.00</td>
-                                                        <td>5</td>
-                                                        <td>8.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td>70.40</td>
-                                                        <td>83.00</td>
-                                                        <td>88.00</td>
-                                                        <td>A</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>07</td>
-                                                        <td>English-I</td>
-                                                        <td>100.00</td>
-                                                        <td>5</td>
-                                                        <td>8.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td>70.40</td>
-                                                        <td>83.00</td>
-                                                        <td>88.00</td>
-                                                        <td>A</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>08</td>
-                                                        <td>English-I</td>
-                                                        <td>100.00</td>
-                                                        <td>5</td>
-                                                        <td>8.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td>70.40</td>
-                                                        <td>83.00</td>
-                                                        <td>88.00</td>
-                                                        <td>A</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>09</td>
-                                                        <td>English-I</td>
-                                                        <td>100.00</td>
-                                                        <td>5</td>
-                                                        <td>8.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td>70.40</td>
-                                                        <td>83.00</td>
-                                                        <td>88.00</td>
-                                                        <td>A</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>10</td>
-                                                        <td>English-I</td>
-                                                        <td>100.00</td>
-                                                        <td>5</td>
-                                                        <td>8.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td>70.40</td>
-                                                        <td>83.00</td>
-                                                        <td>88.00</td>
-                                                        <td>A</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>11</td>
-                                                        <td>English-I</td>
-                                                        <td>100.00</td>
-                                                        <td>5</td>
-                                                        <td>8.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td>70.40</td>
-                                                        <td>83.00</td>
-                                                        <td>88.00</td>
-                                                        <td>A</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>12</td>
-                                                        <td>English-I</td>
-                                                        <td>100.00</td>
-                                                        <td>5</td>
-                                                        <td>8.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td></td>
-                                                        <td>88.00</td>
-                                                        <td>70.40</td>
-                                                        <td>83.00</td>
-                                                        <td>88.00</td>
-                                                        <td>A</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="10">
-                                                            <strong>Total Marks</strong>
-                                                        </td>
-                                                        <td>
-                                                            <strong>769</strong>
-                                                        </td>
-                                                        <td colspan="2"></td>
-                                                    </tr>
-                                                    <tr class="border-left-0 border-right-0">
-                                                        <td class="border-left-0 border-right-0 py-3" colspan="13"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                                </t>
+                                            </tbody>
+                                        </table>
                                     </div>
-                                    <!--<div class="my-4"/>-->
-                                    <!--<div class="row">-->
-                                    <!--<div class="col-12">-->
-                                    <!--<table class="table table-bordered mb-1">-->
-                                    <!--<tbody>-->
-                                    <!---->
-                                    <!--</tbody>-->
-                                    <!--</table>-->
-                                    <!--</div>-->
-                                    <!--</div>-->
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <table class="table table-bordered mb-1">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Grade Point Average</th>
-                                                        <th>4.00</th>
-                                                        <th colspan="2" class="text-center">Attendance</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>Letter Grade</td>
-                                                        <td>A</td>
-                                                        <td>Working Days</td>
-                                                        <td>0</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Total Marks with Fraction</td>
-                                                        <td>769.30</td>
-                                                        <td>Present</td>
-                                                        <td>0</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"></div>
+                                    <div class="col-3 text-center bg-info">
+                                        <h2>A:Co-Scholstics</h2>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-4"></div>
-                                        <div class="col-4 text-center bg-info">
-                                            <h2>B:Co-Scholstics Head</h2>
-                                        </div>
-                                        <div class="col-4"></div>
-                                    </div>
-
-                                    <div class="row d-flex">
-                                        <div class="col-6">
-                                            <table class="table table-bordered">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Co-Scholstics Head</th>
-                                                        <th>Grade</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <strong>English Conversional</strong>
-                                                        </td>
-                                                        <td style="border-right: none;">A</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <strong>Social Skills</strong>
-                                                        </td>
-                                                        <td>A+</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <strong>Sense of Responsibility</strong>
-                                                        </td>
-                                                        <td style="border-right: none;">A</td>
-                                                    </tr>
+                                    <div class="col-5"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <table class="table table-bordered mb-1 border-left-0 border-right-0">
+                                            <thead>
+                                                <tr>
+                                                    <th class="align-middle" rowspan="2">Srl.</th>
+                                                    <th class="align-middle" rowspan="2">Subjects</th>
+                                                    <th class="align-middle" rowspan="2">Full Marks</th>
+                                                    <th class="align-middle" rowspan="2">S.B.A</th>
+                                                    <th class="align-middle" rowspan="2">CT</th>
+                                                    <th class="align-middle" colspan="5"></th>
+                                                    <th class="align-middle" rowspan="2">Total Marks</th>
+                                                    <th class="align-middle" rowspan="2">Highest Marks</th>
+                                                    <th class="align-middle" rowspan="2">Letter Grade</th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="align-middle">MCQ</th>
+                                                    <th class="align-middle">CQ</th>
+                                                    <th class="align-middle">PR</th>
+                                                    <th class="align-middle">Total</th>
+                                                    <th class="align-middle">Con.T</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="border-left-0 border-right-0">
+                                                <t t-set="sl_no" t-value="0"/>
+                                                <t t-foreach="o.result_ids" t-as="s">
+                                                    <t t-set="sl_no" t-value="sl_no+1"/>
                                                     <tr>
                                                         <td>
-                                                            <strong>Creaivity</strong>
-                                                        </td>
-                                                        <td>A-</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <strong>Self Confidence</strong>
-                                                        </td>
-                                                        <td style="border-right: none;">A+</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <strong>Puntual</strong>
-                                                        </td>
-                                                        <td>A+</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div class="col-6">
-                                            <table class="table table-bordered">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Co-Scholstics Head</th>
-                                                        <th>Grade</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <strong>Moral Values</strong>
-                                                        </td>
-                                                        <td style="border-right: none;">A+</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <strong>Team Works</strong>
-                                                        </td>
-                                                        <td>A+</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <strong>Physical, Health Education</strong>
-                                                        </td>
-                                                        <td style="border-right: none;">A+</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <strong>Neat And Tidy</strong>
-                                                        </td>
-                                                        <td>A+</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <strong>Discipline</strong>
-                                                        </td>
-                                                        <td style="border-right: none;">B-</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <strong>Attendance/Total Days</strong>
-                                                        </td>
-                                                        <td>A</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="border border-dark rounded mb-1">
-                                                <table class="table borderless mb-1" style="border-top: none;">
-                                                    <tr>
-                                                        <td style="border-right: none;">
-                                                            <strong>Remarks:</strong>
-                                                        </td>
-                                                        <td style="border-left: none;">Lorem Ipsum is simply dummy text
-                                                            of the printing and
-                                                            typesetting industry. Lorem Ipsum has been the industry's
-                                                            standard dummy
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <table class="table table-bordered mb-1">
-                                                <thead>
-                                                    <tr>
-                                                        <th colspan="2">Class Teachers Name: Kazi Md. Karim Hossain</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input"/>
-                                                                <span>Promoted to Grade</span>
-                                                            </div>
+                                                            <span t-esc="sl_no"/>
                                                         </td>
                                                         <td>
-                                                            <div class="form-check">
-                                                                <input type="checkbox" class="form-check-input"/>
-                                                                <span>To Repeat</span>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td rowspan="2" class="align-middle">
-                                                            <div class="row">
-                                                                <div class="col">
-                                                                    <span>Vice Principal's Signature:</span>
-                                                                </div>
-                                                                <div class="col">
-                                                                    <img src="" alt=""/>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="align-middle">
-                                                            <div class="row">
-                                                                <div class="col">
-                                                                    <span>Founder Principal's Signature:</span>
-                                                                </div>
-                                                                <div class="col">
-                                                                    <img src="" alt=""/>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="align-middle">
-                                                            <div class="row">
-                                                                <div class="col">
-                                                                    <span>Principal's Signature:</span>
-                                                                </div>
-                                                                <div class="col">
-                                                                    <img src="" alt=""/>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="align-middle">
-                                                            <div class="row">
-                                                                <div class="col">
-                                                                    <strong>Parent's Signature:</strong>
-                                                                </div>
-                                                                <div class="col">
-                                                                    <img src="" alt=""/>
-                                                                </div>
-                                                            </div>
+                                                            <span t-field="s.subject_id"/>
                                                         </td>
                                                         <td>
-                                                            <strong>Next Term Begins on:</strong>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <table class="table">
-                                                    <tr>
-                                                        <td>Add. Exam Name
-                                                        </td>
-                                                        <td>Total Mark
-                                                        </td>
-
-                                                        <td>Obtain Mark
+                                                            <span t-field="s.maximum_marks"/>
                                                         </td>
                                                         <td>
-                                                           Roll
+                                                            <span t-field="s.sba_marks"/>
                                                         </td>
-                                                    </tr>
-                                                <t t-foreach="additional_result" t-as="app">
-                                                    <tr>
-                                                        <td t-esc="app.a_exam_id.name">
+                                                        <td>
+                                                            <span t-field="s.ct_marks"/>
                                                         </td>
-                                                        <td t-esc="app.a_exam_id.maximum_marks">
+                                                        <td>
+                                                            <span t-field="s.mcq_marks"/>
                                                         </td>
-                                                        <td t-esc="app.obtain_marks">
+                                                        <td>
+                                                            <span t-field="s.cq_marks"/>
                                                         </td>
-                                                        <td t-esc="app.roll_no_id">
+                                                        <td>
+                                                            <span t-field="s.practical_marks"/>
+                                                        </td>
+                                                        <td>
+                                                            <span t-field="s.total_exam_marks"/>
+                                                        </td>
+                                                        <td>
+                                                            <span t-field="s.con_total_marks"/>
+                                                        </td>
+                                                        <td>
+                                                            <span t-field="s.obtain_marks"/>
+                                                        </td>
+                                                        <td>
+                                                            <span t-field="s.highest_marks"/>
+                                                        </td>
+                                                        <td>
+                                                            <span t-field="s.grade_line_id"/>
                                                         </td>
                                                     </tr>
                                                 </t>
 
+                                                <tr>
+                                                    <td colspan="10">
+                                                        <strong>Total Marks</strong>
+                                                    </td>
+                                                    <td>
+                                                        <strong><span t-field="o.total"/></strong>
+                                                    </td>
+                                                    <td colspan="2"></td>
+                                                </tr>
+                                                <tr class="border-left-0 border-right-0">
+                                                    <td class="border-left-0 border-right-0 py-3" colspan="13"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <table class="table table-bordered mb-1">
+                                            <thead>
+                                                <tr>
+                                                    <th>Grade Point Average</th>
+                                                    <th>5.00</th>
+                                                    <th colspan="2" class="text-center">Attendance</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Letter Grade</td>
+                                                    <td><span t-field="o.grade"/></td>
+                                                    <td>Working Days</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <t t-foreach="stu_attendance" t-as="att">
+                                                    <td>Total Marks with Fraction</td>
+                                                    <td><span t-field="o.total"/></td>
+                                                    <td>Present</td>
+                                                    <td t-esc="attendance">
+                                                    </td>
+                                                    </t>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4"></div>
+                                    <div class="col-4 text-center bg-info">
+                                        <h2>B:Co-Scholstics Head</h2>
+                                    </div>
+                                    <div class="col-4"></div>
+                                </div>
+
+                                <div class="row d-flex">
+                                    <div class="col-6">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Co-Scholstics Head</th>
+                                                    <th>Grade</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <strong>English Conversional</strong>
+                                                    </td>
+                                                    <td style="border-right: none;">A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <strong>Social Skills</strong>
+                                                    </td>
+                                                    <td>A+</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <strong>Sense of Responsibility</strong>
+                                                    </td>
+                                                    <td style="border-right: none;">A</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <strong>Creaivity</strong>
+                                                    </td>
+                                                    <td>A-</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <strong>Self Confidence</strong>
+                                                    </td>
+                                                    <td style="border-right: none;">A+</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <strong>Puntual</strong>
+                                                    </td>
+                                                    <td>A+</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col-6">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Co-Scholstics Head</th>
+                                                    <th>Grade</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <strong>Moral Values</strong>
+                                                    </td>
+                                                    <td style="border-right: none;">A+</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <strong>Team Works</strong>
+                                                    </td>
+                                                    <td>A+</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <strong>Physical, Health Education</strong>
+                                                    </td>
+                                                    <td style="border-right: none;">A+</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <strong>Neat And Tidy</strong>
+                                                    </td>
+                                                    <td>A+</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <strong>Discipline</strong>
+                                                    </td>
+                                                    <td style="border-right: none;">B-</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <strong>Attendance/Total Days</strong>
+                                                    </td>
+                                                    <td>A</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="border border-dark rounded mb-1">
+                                            <table class="table borderless mb-1" style="border-top: none;">
+                                                <tr>
+                                                    <td style="border-right: none;">
+                                                        <strong>Remarks:</strong>
+                                                    </td>
+                                                    <td style="border-left: none;">
+
+                                                    </td>
+                                                </tr>
                                             </table>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <table class="table table-bordered mb-1">
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="2">Class Teachers Name: Kazi Md. Karim Hossain</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input"/>
+                                                            <span>Promoted to Grade</span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="form-check">
+                                                            <input type="checkbox" class="form-check-input"/>
+                                                            <span>To Repeat</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="2" class="align-middle">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <span>Vice Principal's Signature:</span>
+                                                            </div>
+                                                            <div class="col">
+                                                                <img src="" alt=""/>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="align-middle">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <span>Founder Principal's Signature:</span>
+                                                            </div>
+                                                            <div class="col">
+                                                                <img src="" alt=""/>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="align-middle">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <span>Principal's Signature:</span>
+                                                            </div>
+                                                            <div class="col">
+                                                                <img src="" alt=""/>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="align-middle">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <strong>Parent's Signature:</strong>
+                                                            </div>
+                                                            <div class="col">
+                                                                <img src="" alt=""/>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <strong>Next Term Begins on:</strong>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+<!--                                        <table class="table">-->
+<!--                                            <tr>-->
+<!--                                                <td>Add. Exam Name-->
+<!--                                                </td>-->
+<!--                                                <td>Total Mark-->
+<!--                                                </td>-->
+
+<!--                                                <td>Obtain Mark-->
+<!--                                                </td>-->
+<!--                                                <td>-->
+<!--                                                    Roll-->
+<!--                                                </td>-->
+<!--                                            </tr>-->
+<!--                                            <t t-foreach="additional_result" t-as="app">-->
+<!--                                                <tr>-->
+<!--                                                    <td t-esc="app.a_exam_id.name">-->
+<!--                                                    </td>-->
+<!--                                                    <td t-esc="app.a_exam_id.maximum_marks">-->
+<!--                                                    </td>-->
+<!--                                                    <td t-esc="app.obtain_marks">-->
+<!--                                                    </td>-->
+<!--                                                    <td t-esc="app.roll_no_id">-->
+<!--                                                    </td>-->
+<!--                                                </tr>-->
+<!--                                            </t>-->
+
+<!--                                        </table>-->
+<!--                                        <table class="table">-->
+<!--                                            <tr>-->
+<!--                                                <td>Name-->
+<!--                                                </td>-->
+<!--                                                <td>Roll-->
+<!--                                                </td>-->
+
+<!--                                                <td>Attendance-->
+<!--                                                </td>-->
+<!--                                            </tr>-->
+<!--                                            <t t-foreach="stu_attendance" t-as="att">-->
+<!--                                                <tr>-->
+<!--                                                    <td t-esc="att.name">-->
+<!--                                                    </td>-->
+<!--                                                    <td t-esc="att.roll_no">-->
+<!--                                                    </td>-->
+<!--                                                    <td t-esc="'%s %s' %(str(attendance), '%')">-->
+<!--                                                    </td>-->
+<!--                                                </tr>-->
+<!--                                            </t>-->
+
+<!--                                        </table>-->
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
+                    </t>
                 </t>
             </t>
         </template>
+
+
+        <record id="paperformat_portrait_custom"
+                model="report.paperformat">
+            <field name="name">DIS A4</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">10</field>
+            <field name="margin_bottom">13</field>
+            <field name="margin_left">5</field>
+            <field name="margin_right">5</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">43</field>
+            <field name="dpi">90</field>
+        </record>
 
         <report
                 id="reportcard_pdf"
@@ -638,8 +515,17 @@
                 name="report_card.dis_report"
                 file="report_card.dis_report"
                 print_report_name="'dis card'"
+                paperformat="paperformat_portrait_custom"
         />
-
+        <report
+                id="test_template"
+                model="exam.result"
+                string="Test Reports"
+                report_type="qweb-pdf"
+                name="report_card.test_report"
+                file="report_card.test_report"
+                print_report_name="'Test card'"
+        />
     </data>
 
 

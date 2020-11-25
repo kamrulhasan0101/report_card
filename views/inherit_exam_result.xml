@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="exam_result_inherit" model="ir.ui.view">
+        <field name="name">exam.result.inherit</field>
+        <field name="model">exam.result</field>
+        <field name="inherit_id" ref="exam.view_exam_result_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='result_ids']" position="replace">
+                <field name="result_ids" nolabel="1" colspan="4">
+                    <tree string="Subjects" editable="bottom" create="false" delete="false">
+                        <field name="subject_id"
+                               attrs="{'readonly':[('state','in',['confirm','re-evaluation','re-evaluation_confirm','done'])]}"/>
+                        <field name="maximum_marks" readonly="1"/>
+                        <!--<field name="minimum_marks" readonly="1"/>-->
+                        <field name="sba_marks"/>
+                        <field name="ct_marks"/>
+                        <field name="mcq_marks"
+                               attrs="{'readonly':[('state','in',['confirm','re-evaluation','re-evaluation_confirm','done'])]}"/>
+                        <field name="cq_marks"
+                               attrs="{'readonly':[('state','in',['confirm','re-evaluation','re-evaluation_confirm','done'])]}"/>
+                        <field name="practical_marks"
+                               attrs="{'readonly':[('state','in',['confirm','re-evaluation','re-evaluation_confirm','done'])]}"/>
+                        <field name="total_exam_marks" readonly="1"/>
+                        <field name="con_total_marks" readonly="1"/>
+                        <field name="obtain_marks" readonly="1"/>
+                        <field name="marks_reeval"
+                               attrs="{'invisible':[('state','not in',['re-evaluation','re-evaluation_confirm','done'])],'readonly':[('state','in',['re-evaluation_confirm','done'])]}"/>
+                        <field name="state" invisible="1"/>
+                        <field name="highest_marks" readonly="1"/>
+                        <field name="grade_line_id" readonly="1"/>
+                    </tree>
+                    <form string="Subjects">
+                        <group col="4">
+                            <field name="subject_id"
+                                   attrs="{'readonly':[('state','in',['confirm','re-evaluation','re-evaluation_confirm','done'])]}"/>
+                            <field name="maximum_marks" readonly="1"/>
+                            <!--<field name="minimum_marks" readonly="1"/>-->
+                            <field name="sba_marks"/>
+                            <field name="ct_marks"/>
+                            <field name="mcq_marks"
+                                   attrs="{'readonly':[('state','in',['confirm','re-evaluation','re-evaluation_confirm','done'])]}"/>
+                            <field name="cq_marks"
+                                   attrs="{'readonly':[('state','in',['confirm','re-evaluation','re-evaluation_confirm','done'])]}"/>
+                            <field name="practical_marks"
+                                   attrs="{'readonly':[('state','in',['confirm','re-evaluation','re-evaluation_confirm','done'])]}"/>
+                            <field name="total_exam_marks" readonly="1"/>
+                            <field name="con_total_marks" readonly="1"/>
+                            <field name="obtain_marks" readonly="1"/>
+                            <field name="marks_reeval"
+                                   attrs="{'invisible':[('state','not in',['re-evaluation','re-evaluation_confirm','done'])],'readonly':[('state','in',['re-evaluation_confirm','done'])]}"/>
+                            <field name="state" invisible="1"/>
+                            <field name="highest_marks" readonly="1"/>
+                            <field name="grade_line_id" readonly="1"/>
+                        </group>
+                    </form>
+                </field>
+
+            </xpath>
+        </field>
+    </record>
+</odoo>
