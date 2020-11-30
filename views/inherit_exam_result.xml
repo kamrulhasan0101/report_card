@@ -41,7 +41,7 @@
                                    attrs="{'readonly':[('state','in',['confirm','re-evaluation','re-evaluation_confirm','done'])]}"/>
                             <field name="cq_marks"
                                    attrs="{'readonly':[('state','in',['confirm','re-evaluation','re-evaluation_confirm','done'])]}"/>
-                            <field zname="practical_marks"
+                            <field name="practical_marks"
                                    attrs="{'readonly':[('state','in',['confirm','re-evaluation','re-evaluation_confirm','done'])]}"/>
                             <field name="total_exam_marks" readonly="1"/>
                             <field name="con_total_marks" readonly="1"/>
