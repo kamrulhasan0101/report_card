@@ -3,6 +3,20 @@
 from odoo import models, fields, api, tools
 
 
+class ExamSchedule(models.Model):
+    _inherit = 'exam.schedule.line'
+
+    @api.onchange('standard_id')
+    def onchange_standard(self):
+        '''Method to get standard according to the standard selected'''
+
+    standard_id = fields.Many2one('standard.standard', 'standard_id')
+    timetable_id = fields.Many2one('time.table', 'standard_id')
+    exam_id = fields.Many2one('exam.exam', 'Exam')
+    standard_ids = fields.Many2many('standard.standard',
+                                    string='Participant Standards')
+
+
 class ExamResultInherit(models.Model):
     _inherit = 'exam.subject'
     cq_marks = fields.Float("CQ Marks")
